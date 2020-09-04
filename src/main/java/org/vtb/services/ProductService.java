@@ -1,10 +1,10 @@
-package services;
+package org.vtb.services;
 
-import entities.Product;
+import org.vtb.entities.Product;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
-import repositories.ProductRepository;
+import org.vtb.repositories.ProductRepository;
 
 import java.util.List;
 

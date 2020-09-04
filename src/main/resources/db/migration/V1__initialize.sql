@@ -1,4 +1,4 @@
-
+DROP TABLE IF EXISTS documents CASCADE;
 create table documents (
     id bigserial primary key,
     contain varchar(5000),
