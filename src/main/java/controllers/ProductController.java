@@ -14,22 +14,21 @@ import java.util.List;
 @AllArgsConstructor
 public class ProductController {
     @Autowired
-    private ProductService ps;
+    private ProductService productService;
 
-    @GetMapping("/all")
+    @GetMapping()
     public List<Product> getAll() {
-        System.out.println("\n\\n\n\n fgdgdfgdfgdfg");
-        return ps.getAll();
+        return productService.getAll();
     }
 
     @GetMapping("/{id}")
     public Product getById(@PathVariable long id) {
-        return ps.getById(id);
+        return productService.getById(id);
     }
 
     @DeleteMapping("/{id}")
     public void deleteById(@PathVariable long id) {
-        ps.deleteById(id);
+        productService.deleteById(id);
     }
 
     @PostMapping(consumes = "application/json", produces = "application/json")
@@ -38,11 +37,6 @@ public class ProductController {
         if (product.getId() != null) {
             product.setId(null);
         }
-        return ps.saveOrUpdate(product);
+        return productService.saveOrUpdate(product);
     }
-
-//    @Autowired
-//    public void setPs(ProductService ps) {
-//        this.ps = ps;
-//    }
 }
