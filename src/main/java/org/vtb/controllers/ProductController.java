@@ -1,11 +1,11 @@
-package controllers;
+package org.vtb.controllers;
 
-import entities.Product;
+import org.vtb.entities.Product;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
-import services.ProductService;
+import org.vtb.services.ProductService;
 
 import java.util.List;
 

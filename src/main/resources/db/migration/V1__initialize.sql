@@ -1,4 +1,4 @@
-
+DROP TABLE IF EXISTS documents CASCADE;
 create table documents (
     id bigserial primary key,
     contain varchar(5000),
@@ -28,5 +28,18 @@ VALUES ('phone', 45000, 'good'),
        ('car', 1000000, 'norm'),
        ('book', 1000, 'not bad'),
        ('ball', 1200, 'bad');
+
+DROP TABLE IF EXISTS Furniture CASCADE;
+create table Furniture(
+    id    bigserial primary key,
+    title varchar(255),
+    price integer,
+);
+
+INSERT INTO products (title, price, description)
+values ('Chair', 100),
+values ('Table', 200),
+values ('Sofa', 300),
+values ('Сupboard', 400);
 
 COMMIT;

@@ -1,4 +1,4 @@
-package entities;
+package org.vtb.entities;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
